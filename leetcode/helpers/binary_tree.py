@@ -1,18 +1,21 @@
 # Definition for a binary tree node.
+from typing import Optional
+
+
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
+    def __init__(self, val=0, left=None, right=None) -> None:
         self.val = val
         self.left = left
         self.right = right
 
 
-def build_tree(array):
+def build_tree(array) -> Optional[TreeNode]:
     if not len(array):
         return None
 
     def set_node(index):
-        if index >= len(array):
-            return None
+        if index >= len(array) or array[index] is None:
+            return
         node = TreeNode(val=array[index])
         node.left = set_node(2*index+1)
         node.right = set_node(2*index+2)

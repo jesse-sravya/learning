@@ -1,6 +1,5 @@
 from typing import List
 from helpers.test_helper import TestHelper
-from typing import List
 
 
 class Solution:
