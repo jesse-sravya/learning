@@ -1,5 +1,6 @@
 from typing import List
-from test_helper import TestHelper
+from helpers.test_helper import TestHelper
+
 
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
@@ -23,9 +24,9 @@ class Solution:
         return result
 
 
-
 TestHelper.test(Solution().singleNumber2([2, 2, 1]), 1)
 TestHelper.test(Solution().singleNumber2([4, 1, 2, 1, 2]), 4)
 TestHelper.test(Solution().singleNumber2([1]), 1)
-TestHelper.test(Solution().singleNumber2([1,3,1,-1,3]), -1)
-TestHelper.test(Solution().singleNumber2([1, 1, 2, 3, 4, 5, 4, 5, 3, -1, 2]), -1)
+TestHelper.test(Solution().singleNumber2([1, 3, 1, -1, 3]), -1)
+TestHelper.test(Solution().singleNumber2(
+    [1, 1, 2, 3, 4, 5, 4, 5, 3, -1, 2]), -1)

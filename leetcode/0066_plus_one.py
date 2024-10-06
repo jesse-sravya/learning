@@ -1,5 +1,5 @@
 from typing import List
-from test_helper import TestHelper
+from helpers.test_helper import TestHelper
 from typing import List
 
 
@@ -12,15 +12,13 @@ class Solution:
             carry = digits[index] // 10
             digits[index] = digits[index] % 10
             index -= 1
-            
-        return digits if not carry else [carry] + digits
 
+        return digits if not carry else [carry] + digits
 
 
 TestHelper.test(Solution().plusOne([8, 9, 9]), [9, 0, 0])
 TestHelper.test(Solution().plusOne([1, 2, 3]), [1, 2, 4])
 TestHelper.test(Solution().plusOne([4, 3, 2, 1]), [4, 3, 2, 2])
 TestHelper.test(Solution().plusOne([9]), [1, 0])
-TestHelper.test(Solution().plusOne([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]), [9, 8, 7, 6, 5, 4, 3, 2, 1, 1])
-
-
+TestHelper.test(Solution().plusOne([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]), [
+                9, 8, 7, 6, 5, 4, 3, 2, 1, 1])
